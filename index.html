@@ -54,14 +54,24 @@
 <li>Add-on to export Google Doc to Markdown
 
 <ul>
-<li>Add-ons &gt;&gt; Get add-ons &gt;&gt; Search ‘Markdown’. Link<br>
+<li>Add-ons &gt;&gt; Get add-ons &gt;&gt; Search ‘Markdown’. <a href="https://chrome.google.com/webstore/detail/export-as-markdown/hbojhdcnbcondcdfpfocpkjkfkbnbdad">Link</a><br>
 </li>
 </ul>
 </li>
-<li>PHP parser to convert md to html</li>
+<li><a href="https://github.com/cebe/markdown">PHP parser to convert md to html</a></li>
 <li>Download via composer or otherwise in your directory</li>
-<li>Code is http://localhost:8000/2016/fe/201610/15/test.php</li>
+<li>Code is<br>
+</li>
 </ul>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">require_once</span> <span class="pl-s"><span class="pl-pds">'</span>vendor\autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1"><span class="pl-smi">$parser</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\cebe\markdown\</span><span class="pl-c1">GithubMarkdown</span>();</span>
+<span class="pl-s1"> <span class="pl-c">// Get contents of markdown.md file in a var $markdown</span></span>
+<span class="pl-s1"><span class="pl-smi">$markdown</span> <span class="pl-k">=</span> <span class="pl-c1">file_get_contents</span>(<span class="pl-s"><span class="pl-pds">'</span>markdown.md<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-c">// Output html to a var $my_text</span></span>
+<span class="pl-s1"><span class="pl-smi">$my_text</span> <span class="pl-k">=</span> <span class="pl-smi">$parser</span><span class="pl-k">-&gt;</span>parse(<span class="pl-smi">$markdown</span>);</span>
+<span class="pl-s1"></span><span class="pl-pse"><span class="pl-s1">?</span>&gt;</span></pre></div>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
